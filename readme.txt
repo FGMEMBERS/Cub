@@ -7,7 +7,9 @@ License: GPL (see file "COPYING.txt" for details)
 
 INTRODUCTION
 This light aircraft was fully modelled specially for FlightGear by Don Lavelle using Blender http://www.blender.org  The project was started using drawings with permission from Toni Clark of
-http://www.toni-clark.com and the many images that can be obtained from the net were used for details as the project developed; no direct copying of files was involved.The XML files from the original FGFS aircraft, produced in 2002, were used with small changes. The project took over 100 hours to complete.
+http://www.toni-clark.com and the many images that can be obtained from the net were used for details as the project developed; no direct copying of files was involved.
+The XML files from the original FGFS aircraft, produced in 2002,
+ were used with small changes. The project took over 100 hours to complete.
 
 REQUIREMENTS
 You will probably need a decent PC to fly this aircraft; if the F-14 flies OK on your machine it will fly the Cub.
@@ -57,7 +59,6 @@ change mesh to equal actual structure
 change eg. cables and struts, to higher resolution
 floats
 fuel primer
-ground shadow
 improved engine details
 interior lighting
 magneto switch
@@ -84,4 +85,9 @@ http://www.cub-club.com
 http://www.j3-cub.com
 http://www.legend.aero
 http://www.fiddlersgreen.net
+
+VERSION
+1.100910 gauges reflectivities corrected, ground shadow added
+1.100408 fully remodelled aircraft, details above
+1.0 first release in 2002
 

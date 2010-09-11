@@ -1,4 +1,4 @@
-<?xml version="1.1"?>
+<?xml version="1.0"?>
 
 <PropertyList>
 
@@ -656,6 +656,12 @@
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
+
+<!--  ground shadow  -->
+
+ <model>
+  <path>Aircraft/Cub/Models/Effects/shadow.xml</path>
+ </model>
 
 
 </PropertyList>
