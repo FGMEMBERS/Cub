@@ -87,6 +87,7 @@ http://www.legend.aero
 http://www.fiddlersgreen.net
 
 VERSION
+1.110901 Panel update, various minor improvements.
 1.110103 textures broken links, scaling and animated objects fixes
 1.100910 gauges reflectivities corrected, ground shadow added
 1.100408 fully remodelled aircraft, details above

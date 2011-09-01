@@ -71,6 +71,18 @@
        </axis>
     </animation>
 
+ <!-- Despite being a single-sided mesh, the screen still seems opaque from
+     inside the aircraft, so we fudge it -->
+  <animation>
+    <type>select</type>
+    <object-name>screen</object-name>
+    <condition>
+      <not-equals>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </not-equals>
+    </condition>
+  </animation>
 <!--  BASIC AIRCRAFT FEATURES  **********************************************************  -->
 
 <!-- propeller -->
@@ -137,16 +149,14 @@
   <type>rotate</type>
   <object-name>aileron_l</object-name>
   <property>surface-positions/left-aileron-pos-norm</property>
-  <factor>18.0</factor>
-  <center>
-   <x-m>1.16</x-m>
-   <y-m>-3.45</y-m>
-   <z-m>-0.07</z-m>
-  </center>
+  <factor>-18.0</factor>
   <axis>
-   <x>0.0</x>
-   <y>1.01</y>
-   <z>0.0</z>
+    <x1-m>1.219</x1-m>
+    <y1-m>-2.350</y1-m>
+    <z1-m>0.059</z1-m>
+    <x2-m>1.219</x2-m>
+    <y2-m>-4.473</y2-m>
+    <z2-m>0.090</z2-m>
   </axis>
  </animation>
 
@@ -155,15 +165,13 @@
   <object-name>aileron_r</object-name>
   <property>surface-positions/right-aileron-pos-norm</property>
   <factor>18.0</factor>
-  <center>
-   <x-m>1.16</x-m>
-   <y-m>3.45</y-m>
-   <z-m>-0.07</z-m>
-  </center>
   <axis>
-   <x>0.0</x>
-   <y>0.99</y>
-   <z>0.0</z>
+    <x1-m>1.219</x1-m>
+    <y1-m>2.324</y1-m>
+    <z1-m>0.061</z1-m>
+    <x2-m>1.219</x2-m>
+    <y2-m>4.438</y2-m>
+    <z2-m>0.095</z2-m>
   </axis>
  </animation>
 
@@ -301,7 +309,7 @@
   <object-name>door_handle</object-name>
   <property>controls/door[0]</property>
   <factor>-130</factor>
- <center>
+  <center>
    <x-m>0.17</x-m>
    <y-m>0.352</y-m>
    <z-m>-0.823</z-m>
@@ -312,6 +320,25 @@
    <z>0</z>
   </axis>
  </animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>door_handle</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+       if(getprop("controls/door[0]") > 0) {
+         interpolate("controls/door[0]", 0, 1);
+       } else {
+         interpolate("controls/door[0]", 1, 1);
+       }
+      </script>
+    </binding>
+  </action>    
+</animation>
 
 <animation>
   <type>rotate</type>
@@ -330,6 +357,32 @@
   </axis>
  </animation>
 
+<animation>
+  <type>pick</type>
+  <object-name>FuelCutoff</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[0]/cutoff</property>
+    </binding>
+  </action>    
+</animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>FuelCutoff</object-name>
+  <property>controls/engines/engine[0]/cutoff</property>
+  <factor>-0.06</factor>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
  <animation>
   <type>rotate</type>
   <object-name>window_r</object-name>
@@ -346,6 +399,22 @@
    <z>0</z>
   </axis>
  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>trim_handle</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <factor>500</factor>
+  <center>
+    <x-m>0.414</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.804</z-m>
+  </center>
+  <axis>
+    <y>1</y>
+  </axis>
+</animation>
+
 
 <!-- pilot (and safety belts)  -->
 
@@ -502,7 +571,7 @@
   </center>
   <axis>
    <x>0.0</x>
-   <y>-1.0</y>
+   <y>1.0</y>
    <z>0.0</z>
   </axis>
  </animation>
@@ -519,7 +588,7 @@
   </center>
   <axis>
    <x>0.0</x>
-   <y>1.0</y>
+   <y>-1.0</y>
    <z>0.0</z>
   </axis>
  </animation>

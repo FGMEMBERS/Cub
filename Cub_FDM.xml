@@ -2,7 +2,7 @@
 
 <!--
 ************************************************************************
-YASim aerodynamic model for a Piper J-3 Cub.
+YASim aerodynamic model for a Piper J3C-65 with Franklin 4AC-176.
 Started 2002-08-15 by David Megginson.
 
 This aerodynamic model is based on three-views, unauthoritative
@@ -96,13 +96,15 @@ since it is what the weight-and-balance site above uses.
 	   cruise-speed="70" cruise-rpm="2150"
            cruise-alt="8000" cruise-power="49"
            takeoff-power="55" takeoff-rpm="2300"
-           eng-power="65" eng-rpm="2500"
-           x="0.71" y="0" z="-0.65" mass="150" moment="4">
+           x="0.71" y="0" z="-0.65" mass="190" moment="4">
   <actionpt x="1.31" y="0" z="-0.65"/>
   <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
   <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+  <!-- Franklin 4AC-176 of 65hp --> 
+  <piston-engine eng-power="65" eng-rpm="2300" displacement="198.6" compression="6"/>
+          
 </propeller>
 
 <gear x="-5.155" y="0" z="-0.785" compression="0.05"> <!-- tailwheel  -->
