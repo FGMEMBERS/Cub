@@ -2,7 +2,7 @@
 
 <!--
 ************************************************************************
-YASim aerodynamic model for a Piper J3C-65 with Franklin 4AC-176.
+YASim aerodynamic model for a Piper J3C-65 with Continental A-65-8 (0-170-3).
 Started 2002-08-15 by David Megginson.
 
 This aerodynamic model is based on three-views, unauthoritative
@@ -31,16 +31,20 @@ since it is what the weight-and-balance site above uses.
 <airplane mass="680">
 
 <!-- Approach configuration -->
-<approach speed="20" aoa="15">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
+<approach speed="52" aoa="8" fuel="1.0">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <solve-weight idx="0" weight="200.0"/>
+  <solve-weight idx="1" weight="200.0"/>
 </approach>
 
 <!-- Cruise configuration -->
-<cruise speed="64" alt="0">
+<cruise speed="64" alt="0" fuel="1.0">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
-  <control-setting axis="/controls/engines/engine[0]/mixture" value="0.75"/>
-  <control-setting axis="/controls/flight/elevator-trim" value="0.1"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <control-setting axis="/controls/flight/elevator-trim" value="0.0"/>
+  <solve-weight idx="0" weight="200.0"/>
+  <solve-weight idx="1" weight="200.0"/>
 </cruise>
 
 <!-- pilot's eyepoint -->
@@ -91,19 +95,18 @@ since it is what the weight-and-balance site above uses.
 </vstab>
 
 <!-- FIXME: engine mass (just a guess; it's a small engine) -->
-<!-- Assume 75% power at 8000ft -->
 <propeller radius="0.90"
-	   cruise-speed="70" cruise-rpm="2150"
-           cruise-alt="8000" cruise-power="49"
-           takeoff-power="55" takeoff-rpm="2300"
+	   cruise-speed="64" cruise-rpm="2000"
+           cruise-alt="1000" cruise-power="48"
+           takeoff-power="65" takeoff-rpm="2300"
            x="0.71" y="0" z="-0.65" mass="190" moment="4">
   <actionpt x="1.31" y="0" z="-0.65"/>
   <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
   <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-  <!-- Franklin 4AC-176 of 65hp --> 
-  <piston-engine eng-power="65" eng-rpm="2300" displacement="198.6" compression="6"/>
+  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/> 
+  <!-- Continental A-65-8 (0-170-3) of 65hp --> 
+  <piston-engine eng-power="65" eng-rpm="2300" displacement="171" compression="6.3"/>
           
 </propeller>
 

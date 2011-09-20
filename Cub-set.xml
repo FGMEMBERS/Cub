@@ -28,7 +28,7 @@ version 2.0  090410-->
   </systems>
 
   <sound>
-   <path>Aircraft/Generic/generic-sound.xml</path>
+   <path>Aircraft/Cub/Cub-sound.xml</path>
   </sound>
 
   <panel>
@@ -106,12 +106,26 @@ version 2.0  090410-->
     <is-slave type="bool">false</is-slave>
    </aerotow>
   </hitches>
-
+   
+  <!-- Payload -->
+  <weight>
+   <name type="string">Pilot</name>
+   <weight-lb alias="/yasim/Cub/pilot-lb"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">210.0</max-lb>
+  </weight>  
+  <weight>
+   <name type="string">Passenger</name>
+   <weight-lb alias="/yasim/Cub/passenger-lb"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">210.0</max-lb>
+  </weight>
  </sim>
 
  <yasim>
   <Cub>
-   <pilot-lb>180</pilot-lb>
+   <pilot-lb>180.0</pilot-lb>
+   <passenger-lb>0.0</passenger-lb>
   </Cub>
  </yasim>
 
@@ -190,9 +204,9 @@ version 2.0  090410-->
  </input>
 
  <nasal>
-    <Cub>
-      <file>Aircraft/Cub/Nasal/immat.nas</file>
-    </Cub>
-  </nasal>
-
+  <Cub>
+   <file>Aircraft/Cub/Nasal/immat.nas</file>
+  </Cub>
+ </nasal>
+ </payload>
 </PropertyList>
