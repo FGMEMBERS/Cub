@@ -79,7 +79,8 @@ since it is what the weight-and-balance site above uses.
   <stall aoa="16" width="4" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.4" drag="1.2"/>
   <control-input axis="/controls/flight/elevator" control="FLAP0"/>
-  <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+<!-- Elevator trim moves the entire stabilizer, so is particularly effective -->
+  <control-input axis="/controls/flight/elevator-trim" control="FLAP0" src0="-1.0" src1="1.0" dst0="-2.0" dst1="2.0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
 </hstab>
 
@@ -99,7 +100,7 @@ since it is what the weight-and-balance site above uses.
 	   cruise-speed="64" cruise-rpm="2000"
            cruise-alt="1000" cruise-power="48"
            takeoff-power="65" takeoff-rpm="2300"
-           x="0.71" y="0" z="-0.65" mass="190" moment="4">
+           x="0.945" y="0" z="-0.65" mass="198.3" moment="4">
   <actionpt x="1.31" y="0" z="-0.65"/>
   <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
@@ -127,14 +128,14 @@ since it is what the weight-and-balance site above uses.
 </gear>
 
 <!-- There's just one 12-gallon tank, right behind the engine (!!!) -->
-<tank x="-0.45" y="0" z="-0.89" capacity="72"/> 
+<tank x="0.45" y="0" z="-0.89" capacity="72"/> 
 
 <!--
   Note the tandem seating; the x values (arms) come from the
   weight-and-balance page cited at the start.
 -->
 
-<ballast x="-4.0" y="0" z="-0.70" mass="-75"/>
+<ballast x="-4.0" y="0" z="-0.70" mass="-175"/>
 
 <!-- pilot -->
 <weight x="-0.91" y="0" z="-0.70" mass-prop="/yasim/Cub/pilot-lb"/>
