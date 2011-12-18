@@ -365,7 +365,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-toggle</command>
-      <property>controls/engines/engine[0]/cutoff</property>
+      <property>consumables/fuel/tank/selected</property>
     </binding>
   </action>    
 </animation>
@@ -373,7 +373,7 @@
 <animation>
   <type>translate</type>
   <object-name>FuelCutoff</object-name>
-  <property>controls/engines/engine[0]/cutoff</property>
+  <property>consumables/fuel/tank/selected</property>
   <factor>-0.06</factor>
   <axis>
    <x>1</x>
@@ -544,7 +544,7 @@
   <type>rotate</type>
   <object-name>throttle_back</object-name>
   <property>controls/engines/engine/throttle</property>
-  <factor>18</factor>
+  <factor>36</factor>
   <center>
    <x-m>0.718</x-m>
    <y-m>-0.332</y-m>
