@@ -12,10 +12,10 @@ version 2.0  090410-->
 
   <description>Piper J-3 Cub (J3C-65, 1946 model)</description>
   <author>David Megginson (3D, FDM), Jim Wilson (Instruments), Don Lavelle (3D remodel, instrument mods, pilot mods, effects, livery)</author>
-  <status>beta</status>
+  <status>early-production</status>
   <rating>
     <FDM type="int">3</FDM>
-    <systems type="int">1</systems>
+    <systems type="int">3</systems>
     <model type="int">4</model>
     <cockpit type="int">4</cockpit>
   </rating>
@@ -211,9 +211,19 @@ version 2.0  090410-->
   </keyboard>
  </input>
 
+ <limits>
+   <max-positive-g>3.5</max-positive-g>
+   <max-negative-g>-1.52</max-negative-g>
+   <vne>106</vne>
+ </limits>
+
  <nasal>
   <Cub>
    <file>Aircraft/Cub/Nasal/immat.nas</file>
   </Cub>
+  <failures> 
+    <file>Aircraft/Generic/limits.nas</file>
+  </failures>
  </nasal>
+
 </PropertyList>
