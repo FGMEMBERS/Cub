@@ -4,6 +4,19 @@
 
  <path>Cub.ac</path>
 
+<!-- Register transparent objects for Rembrandt effects -->
+ <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <object-name>screen</object-name>
+   <object-name>window_top</object-name>
+   <object-name>window_rear_l_0</object-name>
+   <object-name>window_rear_r_0</object-name>
+   <object-name>window_l_0</object-name>
+   <object-name>window_r_0</object-name>
+   <object-name>propeller_fast</object-name>
+ </effect>
+   
+
 <!--  INSTRUMENTS  ***************************************************  -->
 
  <!-- panel models -->

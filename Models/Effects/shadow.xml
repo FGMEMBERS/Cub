@@ -23,6 +23,12 @@ the shadow seems to disappear into the ground.
 
     <!-- transparent objects -->
     <object-name>shadow</object-name>
+    <type>select</type>
+    <condition>
+      <not>
+        <property>/sim/rendering/rembrandt</property>
+      </not>
+    </condition>
   </animation>
 
   <animation>
