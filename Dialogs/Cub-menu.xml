@@ -7,7 +7,7 @@
       <label>Cub</label>
       <enabled type="bool">true</enabled>
       <item>
-        <label>livery (none yet)</label>
+        <label>Select livery</label>
         <binding>
           <command>nasal</command>
           <script>aircraft.livery.dialog.toggle()</script>

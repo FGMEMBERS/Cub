@@ -220,6 +220,7 @@ version 2.0  090410-->
  <nasal>
   <Cub>
    <file>Aircraft/Cub/Nasal/immat.nas</file>
+   <file>Aircraft/Cub/Nasal/liveries.nas</file>
   </Cub>
   <failures> 
     <file>Aircraft/Generic/limits.nas</file>
