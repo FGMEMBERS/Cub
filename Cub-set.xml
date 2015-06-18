@@ -11,7 +11,7 @@ version 2.0  090410-->
   <sim>
 
     <description>Piper J-3 Cub (J3C-65, 1946 model)</description>
-    <author>David Megginson (3D, FDM), Jim Wilson (Instruments), Don Lavelle (3D remodel, instrument mods, pilot mods, effects, livery)</author>
+    <author>David Megginson (3D, FDM), Jim Wilson (Instruments), Don Lavelle (3D remodel, instrument mods, pilot mods, effects, livery), Gilberto Agostinho (Additional liveries)</author>
     <status>early-production</status>
     <rating>
       <FDM type="int">3</FDM>
