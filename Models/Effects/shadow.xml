@@ -13,9 +13,9 @@ the shadow seems to disappear into the ground.
 
   <path>shadow.ac</path>
   <offsets>
-   <x-m>0</x-m>
-   <y-m>0</y-m>
-   <z-m>1.85</z-m>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>1.85</z-m>
   </offsets>
 
   <animation>
@@ -75,21 +75,21 @@ the shadow seems to disappear into the ground.
 
   <!--Translate to ground level  -->
   <animation>
-   <type>translate</type>
-   <object-name>shadow</object-name>
-   <property>/position/altitude-agl-ft</property>
-   <factor>-0.3048</factor>
-   <center>
-     <x-m>0</x-m>
-     <y-m>0</y-m>
-     <z-m>0</z-m>
-   </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
+    <type>translate</type>
+    <object-name>shadow</object-name>
+    <property>/position/altitude-agl-ft</property>
+    <factor>-0.3048</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
 
 </PropertyList>
 
